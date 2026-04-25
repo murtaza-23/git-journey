@@ -70,3 +70,12 @@ NOTE: fetch wont make the changes in your working directory unless you merge it
 
 PULL:
 "git pull" -> (It fetches and merges both in the working directory)
+
+RESTORE (A LIFE SAVER):
+1. Lets say you change, modify or try a new approach and change alot of files
+Midway or in the end you decide this is not working so you want to undo all the new changes
+MANUALLY CHANGING IT IS ALMOST IMPOSSIBLE!
+"git restore <filename> -> (Restores the file to the previous commit made)
+"git restore <FOLDER> -> (Restores all the files in the directory/folder to its previous commit)
+"git restore ." -> (Restore every single file in the entire project)
+"git restore --staged <filename>" -> (Removes the file/s from the staging area back to working directory)
