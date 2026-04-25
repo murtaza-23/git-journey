@@ -58,4 +58,8 @@ GO TO A PREVIOUS VERSION:
 "git checkout <COMMIT-ID>" -> (Allows you to go back to the previous version)
 
 COMPARING TWO FILES (LINES ADDED OR DELETED):
-"git diff <NEW-COMMIT-ID> <OLD-COMMIT-ID>"
+"git diff <NEW-COMMIT-ID> <OLD-COMMIT-ID>" -> (GREEN/BLUE SHOWS ADDED AND RED SHOWS DELETED)
+
+PUSH:
+"git push origin main" -> (where origin = the local repository AND main = branch you want to push in)
+
