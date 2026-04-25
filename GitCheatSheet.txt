@@ -55,7 +55,7 @@ Git gets confused on which change to keep and which to discard. So we manually s
 
 GO TO A PREVIOUS VERSION:
 "git log --oneline" -> (displays all the commits made with their ids)
-"git checkout <COMMIT-ID>" -> (Allows you to go back to the previous version)
+"git checkout <COMMIT-ID>" -> (Allows you to go back to the previous version only to view)
 
 COMPARING TWO FILES (LINES ADDED OR DELETED):
 "git diff <NEW-COMMIT-ID> <OLD-COMMIT-ID>" -> (GREEN/BLUE SHOWS ADDED AND RED SHOWS DELETED)
@@ -89,7 +89,32 @@ on another branch
 Note: It will hide the changes you made in the curretn directory but it is not lost
 just moved to a temporary area
 
-"git stash pop" -> (To get back the unfinished work you stashed)
-"git stash list" -> lists all the stash in the stack (newest on top)
+"git stash pop" -> (To get back the unfinished work you stashed and removes/drops the stash from the stack)
+"git stash apply" -> (to get back the chnages made before stashing but it still keeps the stash in the stack)
+"git stash list" -> (lists all the stash number and ID in the stack (newest on top))
 
 can also access it like a stack -> "git stash pop stash@{0}"
+
+"git stash drop" -> (Drops or deletes the stash in the stack)
+
+REVERT: (Works similar to restore or reset but creates a new commit so that its traceable)
+1. it undo the changes made in the file to the previous commit made, but instead of deleting that
+old commit, it creates a new one that reverse those changes 
+"git log --oneline" -> (To get the commit ID)
+"git revert <COMMIT-ID>" -> (To revert or go back to that commit but still preserving the current commit)
+
+REBASE: (Similar to merge)
+1. Lets say you make a new branch and start creating and modifying in that branch, and someone else
+makes chnages in the main branch or some other branch that you need to include in your current working branch
+Now using "git merge <branch-name>" is one option, but it creates an extra log of merge which makes log history messy
+
+So, we use REBASE. It does not create an extra log and keeps log history clean and linear.
+"git rebase <branch-name>"
+NOTE: Even though rebase is more powerful and easier, it must not be done in public repositories
+or you should do it after informing, as it rewrites existing commit history, and can even chnage the commit IDs
+making it hard to sync or pull
+
+PULL REQUEST (PR):
+1. Used in GitHub to request to merge your current branch in another branch (main)
+Its like telling someone that I have implemented the feature or changes, review it, and if everything is fine
+then merge them into the main branch
