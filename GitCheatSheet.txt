@@ -90,3 +90,6 @@ Note: It will hide the changes you made in the curretn directory but it is not l
 just moved to a temporary area
 
 "git stash pop" -> (To get back the unfinished work you stashed)
+"git stash list" -> lists all the stash in the stack (newest on top)
+
+can also access it like a stack -> "git stash pop stash@{0}"
