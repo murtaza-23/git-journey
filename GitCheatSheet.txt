@@ -1,0 +1,56 @@
+WORKING DIRECTORY (LOCAL):
+1. Create files or directories as per need in the directory you are working in
+OR 
+create repository in Guthub with the required files and then clone it on your desired location in File Explorer
+"git clone <GitHub URL>" -> (Will download the clone of the repository)
+2. "git init" -> (TO initialize git to then keep track of all the changes and modifications in the directory)
+
+STAGING:
+1. Add/delete/update files or directories and make modifications in them as per the requirements
+2. Once finalised and you are ready to move to the next step
+3. "git status" -> (TO check all the chnages done whether its modifed, added or deleted)
+4. Once checked or reviewed then you can add it in temporary repository which allows you to revert your decision
+before finally committing to the changes
+"git add <Filename>" -> (To stage the sepcific file you modified in the current directory)
+"git add --all" or "git add -A" -> (To stage all the files that are changed in the whole project/directory)
+"git add ." -> (To stage all the files and sub-directories within the current directory)
+"git add *" -> (To stage all the files and sub-directories except for the deleted ones)
+"git add *.txt" -> (To stage all the ".txt" files within the current directory)
+
+2. "git reset" -> (When you want to undo your changes, so you remove it from the staging part)
+
+3. "DEL <filename>" then "git add ." -> (To delete a file and then stage it to track it)
+OR "git rm <filename>" -> (Delete and stage it in a single command)
+"git rm -r <FOLDER>" -> (To delete all the files and subdirectories within that folder recursively)
+"git rm -f <filename>" -> (To forcefully delete a file if git doesnt let you due to uncommited changes detected)
+
+"git reset --hard" -> (This will recover the deleted files but may remove the untracked/uncommited files)
+"git reset --cached <filename>" -> (This removes the file from the staging area but keeps in the working directory)
+
+LOCAL REPOSITORY:
+1. Once staged all the changes
+"git commit -m "<MESSAGE>"" -> (To commit the chnages made)
+Note: This command does not save it on the remote repository. It just sits between your working directory 
+and remote repository (local repository)
+
+2. "git reset HEAD~" -> (To move back from the local repository stage to working directory (unstage))
+
+BRANCHING:
+1. Main branch is the default MASTER branch in GitHub
+2. Multiple branches can be made to work independently or experiment and then merge everything back to the main branch
+to reduce mistakes in main branches and increase efficiency
+"git branch <BRANCH-NAME>" -> (To create a new branch)
+
+"git checkout <BRANCH-NAME>" -> (To move from the main or current branch to other branch)
+
+3. Then you can make your own changes in the existing files or new files and then merge it in the main 
+branch
+Note: Make sure you commit first before merging!
+"git merge <BRANCH-NAME> -m <MESSAGE> -> (To merge the changes in a branch from another branch)
+
+BUT THERE CAN BE MERGE CONFLICTS (when two branches have changes in the same file and same path)
+Git gets confused on which change to keep and which to discard. So we manually solve it and then merge it
+
+"git log --oneline" -> (displays all the commits made with their ids)
+"git checkout <COMMIT-ID>" -> (Allows you to go back to the previous version)
+
