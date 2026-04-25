@@ -8,7 +8,7 @@ create repository in Guthub with the required files and then clone it on your de
 STAGING:
 1. Add/delete/update files or directories and make modifications in them as per the requirements
 2. Once finalised and you are ready to move to the next step
-3. "git status" -> (TO check all the chnages done whether its modifed, added or deleted)
+3. "git status" -> (TO check all the changes done whether its modifed, added or deleted)
 4. Once checked or reviewed then you can add it in temporary repository which allows you to revert your decision
 before finally committing to the changes
 "git add <Filename>" -> (To stage the sepcific file you modified in the current directory)
@@ -29,7 +29,7 @@ OR "git rm <filename>" -> (Delete and stage it in a single command)
 
 LOCAL REPOSITORY:
 1. Once staged all the changes
-"git commit -m "<MESSAGE>"" -> (To commit the chnages made)
+"git commit -m "<MESSAGE>"" -> (To commit the changes made)
 Note: This command does not save it on the remote repository. It just sits between your working directory 
 and remote repository (local repository)
 
@@ -79,3 +79,14 @@ MANUALLY CHANGING IT IS ALMOST IMPOSSIBLE!
 "git restore <FOLDER> -> (Restores all the files in the directory/folder to its previous commit)
 "git restore ." -> (Restore every single file in the entire project)
 "git restore --staged <filename>" -> (Removes the file/s from the staging area back to working directory)
+
+STASH:
+1. Git does not allow you to switch to another branch before committing the current changes.
+2. Stash is done when you want to set aside your current unfinsihed work wihtout committing and work
+on another branch
+
+"git stash" -> (Allows you to switch)
+Note: It will hide the changes you made in the curretn directory but it is not lost
+just moved to a temporary area
+
+"git stash pop" -> (To get back the unfinished work you stashed)
