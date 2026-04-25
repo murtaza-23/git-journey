@@ -63,3 +63,8 @@ COMPARING TWO FILES (LINES ADDED OR DELETED):
 PUSH:
 "git push origin main" -> (where origin = the local repository AND main = branch you want to push in)
 
+FETCH:
+"git fetch" -> (You made the changes in the GitHub repository and you want to reflect it in your working directory)
+NOTE: fetch wont make the changes in your working directory unless you merge it
+"git merge"
+
