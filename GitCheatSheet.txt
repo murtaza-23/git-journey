@@ -43,14 +43,19 @@ to reduce mistakes in main branches and increase efficiency
 
 "git checkout <BRANCH-NAME>" -> (To move from the main or current branch to other branch)
 
+MERGING:
 3. Then you can make your own changes in the existing files or new files and then merge it in the main 
 branch
 Note: Make sure you commit first before merging!
 "git merge <BRANCH-NAME> -m <MESSAGE> -> (To merge the changes in a branch from another branch)
 
+MERGE CONFLICT:
 BUT THERE CAN BE MERGE CONFLICTS (when two branches have changes in the same file and same path)
 Git gets confused on which change to keep and which to discard. So we manually solve it and then merge it
 
+GO TO A PREVIOUS VERSION:
 "git log --oneline" -> (displays all the commits made with their ids)
 "git checkout <COMMIT-ID>" -> (Allows you to go back to the previous version)
 
+COMPARING TWO FILES (LINES ADDED OR DELETED):
+"git diff <NEW-COMMIT-ID> <OLD-COMMIT-ID>"
