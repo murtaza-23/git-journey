@@ -1,17 +1,17 @@
 WORKING DIRECTORY (LOCAL):
 1. Create files or directories as per need in the directory you are working in
 OR 
-create repository in Guthub with the required files and then clone it on your desired location in File Explorer
+create repository in GitHub with the required files and then clone it on your desired location in File Explorer
 "git clone <GitHub URL>" -> (Will download the clone of the repository)
 2. "git init" -> (TO initialize git to then keep track of all the changes and modifications in the directory)
 
 STAGING:
 1. Add/delete/update files or directories and make modifications in them as per the requirements
-2. Once finalised and you are ready to move to the next step
-3. "git status" -> (TO check all the changes done whether its modifed, added or deleted)
+2. Once finalized and you are ready to move to the next step
+3. "git status" -> (TO check all the changes done whether its modified, added or deleted)
 4. Once checked or reviewed then you can add it in temporary repository which allows you to revert your decision
 before finally committing to the changes
-"git add <Filename>" -> (To stage the sepcific file you modified in the current directory)
+"git add <Filename>" -> (To stage the specific file you modified in the current directory)
 "git add --all" or "git add -A" -> (To stage all the files that are changed in the whole project/directory)
 "git add ." -> (To stage all the files and sub-directories within the current directory)
 "git add *" -> (To stage all the files and sub-directories except for the deleted ones)
@@ -22,9 +22,9 @@ before finally committing to the changes
 3. "DEL <filename>" then "git add ." -> (To delete a file and then stage it to track it)
 OR "git rm <filename>" -> (Delete and stage it in a single command)
 "git rm -r <FOLDER>" -> (To delete all the files and subdirectories within that folder recursively)
-"git rm -f <filename>" -> (To forcefully delete a file if git doesnt let you due to uncommited changes detected)
+"git rm -f <filename>" -> (To forcefully delete a file if git doesn't let you due to uncommitted changes detected)
 
-"git reset --hard" -> (This will recover the deleted files but may remove the untracked/uncommited files)
+"git reset --hard" -> (This will recover the deleted files but may remove the untracked/uncommitted files)
 "git reset --cached <filename>" -> (This removes the file from the staging area but keeps in the working directory)
 
 LOCAL REPOSITORY:
@@ -72,7 +72,7 @@ PULL:
 "git pull" -> (It fetches and merges both in the working directory)
 
 RESTORE (A LIFE SAVER):
-1. Lets say you change, modify or try a new approach and change alot of files
+1. Lets say you change, modify or try a new approach and change a lot of files
 Midway or in the end you decide this is not working so you want to undo all the new changes
 MANUALLY CHANGING IT IS ALMOST IMPOSSIBLE!
 "git restore <filename> -> (Restores the file to the previous commit made)
@@ -82,15 +82,15 @@ MANUALLY CHANGING IT IS ALMOST IMPOSSIBLE!
 
 STASH:
 1. Git does not allow you to switch to another branch before committing the current changes.
-2. Stash is done when you want to set aside your current unfinsihed work wihtout committing and work
+2. Stash is done when you want to set aside your current unfinished work without committing and work
 on another branch
 
 "git stash" -> (Allows you to switch)
-Note: It will hide the changes you made in the curretn directory but it is not lost
+Note: It will hide the changes you made in the current directory but it is not lost
 just moved to a temporary area
 
 "git stash pop" -> (To get back the unfinished work you stashed and removes/drops the stash from the stack)
-"git stash apply" -> (to get back the chnages made before stashing but it still keeps the stash in the stack)
+"git stash apply" -> (to get back the changes made before stashing but it still keeps the stash in the stack)
 "git stash list" -> (lists all the stash number and ID in the stack (newest on top))
 
 can also access it like a stack -> "git stash pop stash@{0}"
@@ -105,13 +105,13 @@ old commit, it creates a new one that reverse those changes
 
 REBASE: (Similar to merge)
 1. Lets say you make a new branch and start creating and modifying in that branch, and someone else
-makes chnages in the main branch or some other branch that you need to include in your current working branch
+makes changes in the main branch or some other branch that you need to include in your current working branch
 Now using "git merge <branch-name>" is one option, but it creates an extra log of merge which makes log history messy
 
 So, we use REBASE. It does not create an extra log and keeps log history clean and linear.
 "git rebase <branch-name>"
 NOTE: Even though rebase is more powerful and easier, it must not be done in public repositories
-or you should do it after informing, as it rewrites existing commit history, and can even chnage the commit IDs
+or you should do it after informing, as it rewrites existing commit history, and can even change the commit IDs
 making it hard to sync or pull
 
 PULL REQUEST (PR):
