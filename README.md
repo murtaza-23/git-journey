@@ -1,0 +1,4 @@
+This marks the beginning of my Machine Learning and AI journey. Instead of jumping straight into building “next-gen AI models” on day one, I figured it makes more sense to start with the basics. So I began with Git and GitHub, which are actually essential if you don’t want your code turning into an unmanageable mess. They help with organizing, managing, and safely storing code, and make it possible to track progress without breaking everything every other day.
+
+I learned the basics by watching "Git and GitHub Crash Course for Beginners [2026]" by freeCodeCamp on YouTube. But instead of just watching and pretending I understood everything, I followed along, practiced the commands, and took notes. I also made a cheat sheet so future me doesn’t have to Google the same commands again and again :)
+
